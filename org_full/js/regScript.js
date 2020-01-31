@@ -26,10 +26,16 @@ form.addEventListener('submit',function(e){
 	data.append("password",password1);
 
     }else{
-        alert("Passowrd Not Matched-PLEASE TRY AGAIN");
+          swal({
+        title: "OOOPS",
+        icon: "error",
+  text: "error-PASSWORDS DONT MATCH",
+});
+    
+
     }
     var json;
-    if(data!=null){
+    if(data!=null && password1==password2){
 		fetch('http://52.203.240.40:8080/org/register', { // Your POST endpoint
     method: 'POST',
     mode:'cors',
@@ -37,7 +43,12 @@ form.addEventListener('submit',function(e){
   }).then(
     response => response.json() // if the response is a JSON object
   ).then(
-    success => alert("SUCCESFULLY REGISTERED ORGANISATION = " +  name1) // Handle the success response object
+    success => swal({
+        title: "SUCCESS",
+        
+  text: "SUCCESSFULL REGISTER-THANK YOU FOR TRUSTING AUTHENZA!",
+})
+    //alert("SUCCESFULLY REGISTERED ORGANISATION = " +  name1) // Handle the success response object
   ).catch(
     error => console.log(error) // Handle the error response object
   );

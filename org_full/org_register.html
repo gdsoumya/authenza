@@ -45,17 +45,17 @@
                     <h2 class="title">Registration Info</h2>
                     <form method="POST" action="" id="form" name="myform">
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Name" name="name" id="name">
+                            <input class="input--style-3" type="text" placeholder="Name" name="name" id="name" required>
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-3" type="email" placeholder="Email" name="email" id="email">
+                            <input class="input--style-3" type="email" placeholder="Email" name="email" id="email" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="password" placeholder="Password" name="password1" id="password">
+                            <input class="input--style-3" type="password" placeholder="Password" name="password1" id="password" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="password" placeholder="Confirm-Password" name="password2" id="password_confirm">
+                            <input class="input--style-3" type="password" placeholder="Confirm-Password" name="password2" id="password_confirm" required>
                         </div>
                         <div class="p-t-10">
                             <button class="btn btn--pill btn--green" type="submit" value = "Set Cookie">Submit</button>
@@ -75,6 +75,7 @@
     <script src="vendor/datepicker/daterangepicker.js"></script>
 
     <!-- Main JS-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/global.js"></script>
     <script src="js/regScript.js"></script>
 

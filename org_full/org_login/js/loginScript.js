@@ -46,17 +46,22 @@ xhr.onreadystatechange = function () {
     }
 else if(xhr.status==401)
 {
-     var x=confirm("Unsuccesfull Login- Click on OK To Login Again ");
-    if(x==true)
-    {
-     window.location = "./org_login.html";   
-    }
+      swal({
+        title: "OOOPS",
+        icon: "error",
+  text: "error-UNAUTHORIZED ACCESS",
+});
     
 
  }
 else if(xhr.status==400)
 {
-    alert("2FA has been already initialized please complete it first or wait for it to expire");
+      swal({
+        icon: "error",
+        title: "OOOPS",
+  text: "ERROR-2FA has been already initialized please complete it first or wait for it to expire",
+});
+    
 }
 }   
 xhr.send(data_org_login);
