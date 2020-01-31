@@ -80,7 +80,7 @@ h1{
 
 }
 
-input[type=textarea]{
+textarea{
     margin-left: 23%;
     height: 100px;
     width: 200px;
@@ -94,6 +94,6 @@ input[type=textarea]{
     border-radius: 5%;
 }
 
-input[type="textarea"]:hover{
+textarea:hover{
     background: #cacfd6;
 }
