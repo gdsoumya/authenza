@@ -60,7 +60,7 @@ xhr.onreadystatechange = function () {
             window.localStorage.setItem('user_login_token',json.token);
             } 
         }else{
-            console.log(json);
+            swal("Error", json['error'], "error");
         }
         //hideLoader();
         }
