@@ -499,7 +499,7 @@ input {
 }
 
 .card-3 .card-heading {
-  background: url("user7.png") top left/cover no-repeat;
+  background: url("user7.png") top left/cover;
   display: table-cell;
   background-size: 400px 512px;
 
@@ -568,11 +568,11 @@ ul.info li.active a{
 
 
 .logo1{
-	margin-top: 0px;
- 	margin-right: 40px;
-	font-size: 35px;
-	color : white;
-	border: 1px solid transparent;
+  margin-top: 0px;
+  margin-right: 40px;
+  font-size: 35px;
+  color : white;
+  border: 1px solid transparent;
 }
 
 
@@ -580,9 +580,9 @@ ul.info li.active a{
 
 .logo
 {
-	border: 1px solid transparent;
-	float: left;
-	margin-top: 40px;
- 	margin-left: 40px;
-	background-color: transparent;
+  border: 1px solid transparent;
+  float: left;
+  margin-top: 40px;
+  margin-left: 40px;
+  background-color: transparent;
 }

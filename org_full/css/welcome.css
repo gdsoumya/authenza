@@ -54,7 +54,7 @@ ul.info li.active a{
 ul.lk
 {
 	align-content:center;
-	width: fit-content;
+	width: max-content;
 	margin: 0 auto;
 }
 ul.lk li
