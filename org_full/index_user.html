@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/user_list.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/create_api.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,45 +24,18 @@
         </nav>
     </section>
     <h1>Table Name</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>
-                    Company
-                </th>
-                <th>
-                    Jobs
-                </th>
-                <th>
-                    END OF APP
-                </th>
-                <th>
-                    Location
-                </th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td><span class="logo">LS</span></span>Online shop</td>
-                <td>pimp</td>
-                <td>July 28</td>
-                <td>NY</td>
-            </tr>
-            <tr>
-                <td><span class="logo">LS</span></span>Online shop</td>
-                <td>pimp</td>
-                <td>July 28</td>
-                <td>NY</td>
-            </tr>
-            <tr>
-                <td><span class="logo">LS</span></span>Online shop</td>
-                <td>pimp</td>
-                <td>July 28</td>
-                <td>NY</td>
-            </tr>
-        </tbody>
-
+    <table class="table table-striped" id="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">S.NO</th>
+          <th scope="col">USER-ID</th>
+          <th scope="col">NAME</th>
+          <th scope="col">EMAIL</th>
+          <th scope="col">2-FA-STATUS</th>
+        </tr>
+      </thead>
     </table>
+<script src="user_list.js">
+</script>
 </body>
 </html>
