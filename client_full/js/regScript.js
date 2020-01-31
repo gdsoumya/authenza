@@ -44,8 +44,12 @@ xhr.setRequestHeader('Access-Control-Allow-Origin','*');
 xhr.onreadystatechange = function () { 
     if (xhr.readyState == 4 && xhr.status >= 200) {
         var json = JSON.parse(xhr.responseText);
-        window.token = json['token'];
-        console.log(json);
+        if(xhr.status==200){
+            window.location="./USER_LOGIN.html";
+        }else{
+        console.log(json);    
+        }
+        
         
         //hideLoader();
         }
