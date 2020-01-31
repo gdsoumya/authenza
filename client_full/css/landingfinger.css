@@ -1,6 +1,6 @@
 body{
   background-size: cover;
-	background-color: #f2c0c000;
+  background-color: #f2c0c000;
   background-image: url("../images/bg.png");
   background-repeat: no-repeat;
 }
@@ -72,6 +72,8 @@ border: 0px transparent;
 {
   width:264px;
   height:264px;
+  margin: 0 auto;
+  display: block;
 }
 
 .qleft{

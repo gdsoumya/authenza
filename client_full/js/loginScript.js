@@ -1,3 +1,16 @@
+function handler() {
+      document.querySelector('.modal').style.display="flex";
+}
+
+function handler2() {
+      document.querySelector('.modal').style.display="none";
+}
+
+window.onload=function(){
+        var mb = document.getElementById("b1");
+        var cl = document.getElementById("cl");
+        cl.addEventListener("click", handler2);
+}
 
 document.getElementById('login-form').addEventListener('submit',function(e){
 	e.preventDefault();
@@ -9,7 +22,7 @@ document.getElementById('login-form').addEventListener('submit',function(e){
     const password2 = document.getElementById('your_pass').value;
     const api_key="74d9c3f6bb384d168b658069e3c1825a";
 	const client_id="8ab95867280c41cdbfe1cfb9db7d16db";
-
+    //const token = localStorage.getItem('user_login_token');
     user_login(api_key,client_id,name2,password2);
                     
 	
@@ -35,13 +48,53 @@ xhr.setRequestHeader('Access-Control-Allow-Origin','*');
 xhr.onreadystatechange = function () { 
     if (xhr.readyState == 4 && xhr.status >= 200) {
         var json = JSON.parse(xhr.responseText);
-        window.token = json['token'];
         console.log(json);
-        window.localStorage.setItem('user_login_token',json.token);        
         //alert(json.token);
-        window.location="../../index_dash.html";
+        if(xhr.status == 200){
+            if(json['two_factor']){
+                window.localStorage.setItem('user_login_token',json.token);
+                handler();
+                user_two_factor_check_login(api_key,client_id,json.token);
+            }else{
+            window.location="./login_dash.html";
+            window.localStorage.setItem('user_login_token',json.token);
+            } 
+        }else{
+            console.log(json);
+        }
         //hideLoader();
         }
 }   
 xhr.send(data_user_login);
+}
+
+
+function user_two_factor_check_login(apikey,clientid,token){
+
+var json_data_user_two_factor_active_check= {
+        "api_key": apikey,
+        "client_id": clientid,
+        "token": token
+    };
+var data_user_two_factor_active_check = JSON.stringify(json_data_user_two_factor_active_check);
+
+xhr = new XMLHttpRequest();
+var url = "http://52.203.240.40:8080/user/two_factor/check_login";
+xhr.open("POST", url, true);
+xhr.setRequestHeader("Content-type", "application/json");
+xhr.setRequestHeader("Access-Control-Allow-Origin","*");
+xhr.onreadystatechange = function () { 
+    if (xhr.readyState == 4 && xhr.status >= 200) {
+        var json = JSON.parse(xhr.responseText);
+        console.log(json);
+        if(xhr.status == 200 && json['token']){
+            handler2();
+            window.location="./login_dash.html";
+        }else{
+            console.log(json);
+            setTimeout(user_two_factor_check_login(apikey,clientid,token), 5000);
+        }
+        }
+}   
+xhr.send(data_user_two_factor_active_check);
 }

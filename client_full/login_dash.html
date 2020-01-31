@@ -5,29 +5,12 @@
   <link href="https://fonts.googleapis.com/css?family=Revalia&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/landingfinger.css">
-  <script type="text/javascript">
-    window.onload=function(){
-        var mb = document.getElementById("b1");
-        var cl = document.getElementById("cl");
-        mb.addEventListener("click", handler);
-        cl.addEventListener("click", handler2);
-    }
-
-
-    function handler() {
-      document.querySelector('.modal').style.display="flex";
-    }
-
-    function handler2() {
-      document.querySelector('.modal').style.display="none";
-    }
-    </script>
-
-  </script>
-  <title>
+  
+  <head>
+    <title>
     HOME
   </title>
-  <head>
+    </head>
 <body>
   <div class="left">
     <h1 class="logo">Turity</h1>
@@ -36,8 +19,7 @@
     <h1 class="con">To enable 2 Factor Authentication click the button below</h1>
     </div>
     <div class="bn">
-      <button type="button" name="button" id="b1" class="cl1">Authenticate</button>
-      <button type="button" name="button" class="cl1" >Cancel</button>
+      <button type="button" name="button" id="b1" class="cl1" onclick="user_two_factor_enable()">Authenticate</button>
     </div>
     <div class="modal">
         <div class="qform">
@@ -53,10 +35,11 @@
           <div class="qright">
             <div class="qqrcode">
             <!-- qrcode instead of image -->
-               <img class="qbox" src="images/qr.png">
+               <img class="qbox" id="qrcode" src="images/qr.png">
             </div>
         </div>
       </div>
-
     </div>
+    <script type="text/javascript" src="js/authenticate.js"></script>
 </body>
+</html>
