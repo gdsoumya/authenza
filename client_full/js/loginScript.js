@@ -20,8 +20,8 @@ document.getElementById('login-form').addEventListener('submit',function(e){
     const name2 = document.getElementById('your_email').value;
     //const name1=document.getElementById('your_pass').value;
     const password2 = document.getElementById('your_pass').value;
-    const api_key="74d9c3f6bb384d168b658069e3c1825a";
-	const client_id="8ab95867280c41cdbfe1cfb9db7d16db";
+    const api_key="f8f015ecc7b44240b23ed4a5fc2db01d";
+	const client_id="71c37b6831a847e2a3ba370125974f1f";
     //const token = localStorage.getItem('user_login_token');
     user_login(api_key,client_id,name2,password2);
                     

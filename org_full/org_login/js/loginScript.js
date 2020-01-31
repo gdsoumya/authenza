@@ -34,15 +34,30 @@ xhr.open("POST", url, true);
 xhr.setRequestHeader("Content-type", "application/json");
 xhr.setRequestHeader('Access-Control-Allow-Origin','*');
 xhr.onreadystatechange = function () { 
-    if (xhr.readyState == 4 && xhr.status >= 200) {
+    if (xhr.readyState == 4 && xhr.status == 200) {
         var json = JSON.parse(xhr.responseText);
         window.token = json['token'];
         console.log(json);
         window.localStorage.setItem('org_token',json.token);
+        alert("SUCCESFULLY LOGIN BY - " + email);
         //hideLoader();
         //alert("org_token="+window.localStorage.getItem('org_token'));
         window.location = "./index_dash.html";
     }
+else if(xhr.status==401)
+{
+     var x=confirm("Unsuccesfull Login- Click on OK To Login Again ");
+    if(x==true)
+    {
+     window.location = "./org_login.html";   
+    }
+    
+
+ }
+else if(xhr.status==400)
+{
+    alert("2FA has been already initialized please complete it first or wait for it to expire");
+}
 }   
 xhr.send(data_org_login);
 }

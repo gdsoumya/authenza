@@ -6,8 +6,8 @@ document.getElementById('register-form').addEventListener('submit',function(e){
     const name2 = document.getElementById('email').value;
     const name1=document.getElementById('name').value;
     const password2 = document.getElementById('pass').value;
-    const api_key="74d9c3f6bb384d168b658069e3c1825a";
-	const client_id="8ab95867280c41cdbfe1cfb9db7d16db";
+    const api_key="f8f015ecc7b44240b23ed4a5fc2db01d";
+	const client_id="71c37b6831a847e2a3ba370125974f1f";
 	
 
     window.localStorage.setItem('api_key',api_key);

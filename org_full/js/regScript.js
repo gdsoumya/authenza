@@ -24,8 +24,9 @@ form.addEventListener('submit',function(e){
         data.append("name",name1);
         data.append("email",email1);
 	data.append("password",password1);
+
     }else{
-        alert("Passowrd Not Matched");
+        alert("Passowrd Not Matched-PLEASE TRY AGAIN");
     }
     var json;
     if(data!=null){
@@ -36,7 +37,7 @@ form.addEventListener('submit',function(e){
   }).then(
     response => response.json() // if the response is a JSON object
   ).then(
-    success => console.log(success) // Handle the success response object
+    success => alert("SUCCESFULLY REGISTERED ORGANISATION = " +  name1) // Handle the success response object
   ).catch(
     error => console.log(error) // Handle the error response object
   );
