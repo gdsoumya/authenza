@@ -1,5 +1,4 @@
 h1{
-    color: blueviolet;
     margin: 20px;
     
 }
@@ -13,13 +12,13 @@ h1{
 }
 .table{
     
-    margin-left: 22%;
+    margin-left: 25.5%;
     width: 70%;
 }
 
 button{
     margin-top: 20px;
-    margin-left: 50%;
+    margin-left: 57%;
 }
 
 #sideMenu{
@@ -79,7 +78,8 @@ nav{
 h1{
     margin: 30px;
     margin-left: 21%;
-    color: purple;
+    text-align: center;
+    margin-bottom: 10vh;
 }
 .nav{
     margin-left: 10px;
