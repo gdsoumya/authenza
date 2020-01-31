@@ -5,10 +5,8 @@
 
 button{
     margin: 20px;
-    margin-left: 27%;
-    height:35px;
-    width: 100px;
-    padding:20px;
+    margin-left: 58%;
+    /*! width: 100px; */
 
 }
 
@@ -52,6 +50,7 @@ nav{
     background: #fadfad;
     border-left:5px solid #92cf48 ;
     padding: 15px 40px 15px 25px;
+    text-decoration: none;
     
 }
 
@@ -69,7 +68,7 @@ nav{
 h1{
     margin: 30px;
     margin-left: 21%;
-    color: purple;
+    text-align: center;
 }
 .nav{
     margin-left: 10px;
@@ -81,19 +80,12 @@ h1{
 }
 
 textarea{
-    margin-left: 23%;
-    height: 100px;
-    width: 200px;
-    background : #e0e2e6;
-    border: 2;
+    margin-left: 45%;
+    width: 30%;
     font-size: 1.3rem;
-    color:#92cf48;
-    padding: 10px;
+    padding: 1.4vw;
     font-weight: 100;
     transition: all 0.5s ease-in-out;
-    border-radius: 5%;
-}
-
-textarea:hover{
-    background: #cacfd6;
+    height: 30vh;
+    margin-top: 8vh;
 }
