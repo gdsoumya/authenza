@@ -47,7 +47,7 @@ xhr.onreadystatechange = function () {
         if(xhr.status==200){
             window.location="./USER_LOGIN.html";
         }else{
-        console.log(json);    
+        swal("Error", json['error'], "error");   
         }
         
         

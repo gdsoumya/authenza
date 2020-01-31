@@ -43,8 +43,8 @@ xhr.onreadystatechange = function () {
             handler();
             user_two_factor_active_check(api_key,client_id,token);  
         }else{
-            console.log(json);
-            alert("Already Enabled");
+            swal("Error", "Already Enabled", "error");
+            
         }
         }
 }   
@@ -71,7 +71,7 @@ xhr.onreadystatechange = function () {
         console.log(json);
         if(xhr.status == 200 && json['two_factor']){
             handler2();
-            alert("2FA Activated")
+            swal("Success", "2FA Activated", "success");
         }else{
             console.log(json);
             setTimeout(user_two_factor_active_check(apikey,clientid,token), 5000);
