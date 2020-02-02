@@ -43,7 +43,7 @@ xhr.onreadystatechange = function () {
             handler();
             user_two_factor_active_check(api_key,client_id,token);  
         }else{
-            swal("Error", "Already Enabled", "error");
+            swal("Error", json['error'], "error");
             
         }
         }
@@ -83,8 +83,8 @@ xhr.send(data_user_two_factor_active_check);
 
 
 function user_two_factor_cancel_reg(){
-    const api_key="74d9c3f6bb384d168b658069e3c1825a";
-    const client_id="8ab95867280c41cdbfe1cfb9db7d16db";
+     const api_key="f8f015ecc7b44240b23ed4a5fc2db01d";
+    const client_id="71c37b6831a847e2a3ba370125974f1f";
     const token = window.localStorage.getItem('user_login_token');
 var json_data_user_two_cancel_reg = {
     "api_key": api_key,
