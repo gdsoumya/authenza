@@ -8,8 +8,8 @@
 
 
     //const name1=document.getElementById('your_pass').value;
-  const api_key="a93e8f09748d43f3a44571f2893d5c2b";
-    const client_id="6329761b61bf4e569217c946fc3c0392";
+  const api_key="2c80479a30ba47e880dfd7feedb48ba8";
+    const client_id="9003a6ce2c77437baba5bb6f8e4ec9ae";
     //const token = localStorage.getItem('user_login_token');
     forgot_password(api_key,client_id,name2);
                     

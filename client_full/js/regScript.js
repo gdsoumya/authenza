@@ -6,9 +6,8 @@ document.getElementById('register-form').addEventListener('submit',function(e){
     const name2 = document.getElementById('email').value;
     const name1=document.getElementById('name').value;
     const password2 = document.getElementById('pass').value;
- const api_key="a93e8f09748d43f3a44571f2893d5c2b";
-    const client_id="6329761b61bf4e569217c946fc3c0392";
-
+ const api_key="2c80479a30ba47e880dfd7feedb48ba8";
+    const client_id="9003a6ce2c77437baba5bb6f8e4ec9ae";
    // window.localStorage.setItem('api_key',api_key);
     //window.localStorage.setItem('client_id',client_id);
    window.localStorage.setItem('user_name', name1);

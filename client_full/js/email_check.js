@@ -6,8 +6,8 @@ document.getElementById('login-form').addEventListener('submit',function(e){
     const name2 = document.getElementById('your_email').value;
     const code = document.getElementById('code').value;
     //const name1=document.getElementById('your_pass').value;
- const api_key="a93e8f09748d43f3a44571f2893d5c2b";
-    const client_id="6329761b61bf4e569217c946fc3c0392";
+ const api_key="2c80479a30ba47e880dfd7feedb48ba8";
+    const client_id="9003a6ce2c77437baba5bb6f8e4ec9ae";
     //const token = localStorage.getItem('user_login_token');
     email_verify(api_key,client_id,name2,code);
                     
@@ -22,6 +22,7 @@ function email_verify(api_key,client_id,name2,code){
         "email":name2 ,
         "code":code
     };
+    console.log(json_data_user_email_verify);
 
 var data_user_email_verify = JSON.stringify(json_data_user_email_verify);
 console.log(data_user_email_verify);

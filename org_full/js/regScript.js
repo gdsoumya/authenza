@@ -10,7 +10,7 @@ form.addEventListener('submit',function(e){
     const email1 = document.getElementById('email').value;
     const password1 = document.getElementById('password').value;
 
-    data.append("image",input[0]);
+    data.append("logo",input.files[0]);
     data.append("email",email1);
     data.append("name",name1);
     data.append("password",password1);

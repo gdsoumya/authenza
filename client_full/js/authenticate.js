@@ -20,8 +20,8 @@ window.onload=function(){
     }
 
 function user_two_factor_enable(){
- const api_key="a93e8f09748d43f3a44571f2893d5c2b";
-    const client_id="6329761b61bf4e569217c946fc3c0392";
+ const api_key="2c80479a30ba47e880dfd7feedb48ba8";
+    const client_id="9003a6ce2c77437baba5bb6f8e4ec9ae";
     
 
     
@@ -95,8 +95,8 @@ xhr.send(data_user_two_factor_active_check);
 
 
 function user_two_factor_cancel_reg(){
-   const api_key="a93e8f09748d43f3a44571f2893d5c2b";
-    const client_id="6329761b61bf4e569217c946fc3c0392";
+    const api_key="2c80479a30ba47e880dfd7feedb48ba8";
+    const client_id="9003a6ce2c77437baba5bb6f8e4ec9ae";
     const token = window.localStorage.getItem('user_login_token');
 var json_data_user_two_cancel_reg = {
     "api_key": api_key,
