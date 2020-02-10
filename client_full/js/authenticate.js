@@ -1,3 +1,8 @@
+
+
+
+
+
 window.onload=function(){
         var mb = document.getElementById("b1");
         var cl = document.getElementById("cl");
@@ -15,11 +20,18 @@ window.onload=function(){
     }
 
 function user_two_factor_enable(){
-
-    const api_key="f8f015ecc7b44240b23ed4a5fc2db01d";
-    const client_id="71c37b6831a847e2a3ba370125974f1f";
-    const token = window.localStorage.getItem('user_login_token');
+ const api_key="a93e8f09748d43f3a44571f2893d5c2b";
+    const client_id="6329761b61bf4e569217c946fc3c0392";
     
+
+    
+
+
+    const token = window.localStorage.getItem('user_login_token');
+
+
+    
+
     var json_data_user_two_factor_enable = {   
         "client_id": client_id,
         "api_key": api_key,
@@ -83,8 +95,8 @@ xhr.send(data_user_two_factor_active_check);
 
 
 function user_two_factor_cancel_reg(){
-     const api_key="f8f015ecc7b44240b23ed4a5fc2db01d";
-    const client_id="71c37b6831a847e2a3ba370125974f1f";
+   const api_key="a93e8f09748d43f3a44571f2893d5c2b";
+    const client_id="6329761b61bf4e569217c946fc3c0392";
     const token = window.localStorage.getItem('user_login_token');
 var json_data_user_two_cancel_reg = {
     "api_key": api_key,
@@ -108,3 +120,16 @@ xhr.onreadystatechange = function () {
 }   
 xhr.send(data_user_two_cancel_reg);
 }
+
+
+function parseJwt (token) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+    var test = JSON.parse(jsonPayload)
+document.getElementById('username').text=test['name'];
+    console.log(JSON.parse(jsonPayload));
+};    
+parseJwt(window.localStorage.getItem('user_login_token'));

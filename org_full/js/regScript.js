@@ -2,41 +2,23 @@ const form = document.getElementById('form');
 
 form.addEventListener('submit',function(e){
 	e.preventDefault();
-	
+
     const formdata = new FormData();
     let data= new FormData();
-	//const input = document.getElementById('logo');
-    const name1 = document.getElementById('name').value;
+	  const input = document.getElementById('logo');
+    const name1 = document.getElementById('uname').value;
     const email1 = document.getElementById('email').value;
     const password1 = document.getElementById('password').value;
-    const password2 = document.getElementById('password_confirm').value;
-	
-	// window.localStorage.setItem('name', name1);
-	// window.localStorage.setItem('email', email1);
-	//window.localStorage.setItem('password', password1);
-    
-	
-	
-	
-	
-	if(password1 == password2){
-        //data.append("logo",input.files[0]);
-        data.append("name",name1);
-        data.append("email",email1);
-	data.append("password",password1);
 
-    }else{
-          swal({
-        title: "OOOPS",
-        icon: "error",
-  text: "error-PASSWORDS DONT MATCH",
-});
-    
+    data.append("image",input[0]);
+    data.append("email",email1);
+    data.append("name",name1);
+    data.append("password",password1);
 
-    }
+
+
     var json;
-    if(data!=null && password1==password2){
-		fetch('http://52.203.240.40:8080/org/register', { // Your POST endpoint
+    fetch('http://52.203.240.40:8080/org/register', { // Your POST endpoint
     method: 'POST',
     mode:'cors',
     body: data // This is your file object
@@ -51,12 +33,10 @@ form.addEventListener('submit',function(e){
     //alert("SUCCESFULLY REGISTERED ORGANISATION = " +  name1) // Handle the success response object
   ).catch(
     error => console.log(error) // Handle the error response object
-  );
-    }
-    
-    
-	// data.forEach((value,key) => {
-	// 	console.log(value)
-    // 	 });
+  ); 
+// data.forEach((value,key) => {
+// console.log(value)
+//});
    
 });
+ 

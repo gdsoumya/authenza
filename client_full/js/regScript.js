@@ -6,12 +6,11 @@ document.getElementById('register-form').addEventListener('submit',function(e){
     const name2 = document.getElementById('email').value;
     const name1=document.getElementById('name').value;
     const password2 = document.getElementById('pass').value;
-    const api_key="f8f015ecc7b44240b23ed4a5fc2db01d";
-	const client_id="71c37b6831a847e2a3ba370125974f1f";
-	
+ const api_key="a93e8f09748d43f3a44571f2893d5c2b";
+    const client_id="6329761b61bf4e569217c946fc3c0392";
 
-    window.localStorage.setItem('api_key',api_key);
-    window.localStorage.setItem('client_id',client_id);
+   // window.localStorage.setItem('api_key',api_key);
+    //window.localStorage.setItem('client_id',client_id);
    window.localStorage.setItem('user_name', name1);
     window.localStorage.setItem('user_email', name2);
     window.localStorage.setItem('user_password', password2);
@@ -40,12 +39,13 @@ var url = "http://52.203.240.40:8080/user/register";
 
 xhr.open("POST", url, true);
 xhr.setRequestHeader("Content-type", "application/json");
-xhr.setRequestHeader('Access-Control-Allow-Origin','*');
+//xhr.setRequestHeader('Access-Control-Allow-Origin','*');
 xhr.onreadystatechange = function () { 
     if (xhr.readyState == 4 && xhr.status >= 200) {
         var json = JSON.parse(xhr.responseText);
+        console.log(json);
         if(xhr.status==200){
-            window.location="./USER_LOGIN.html";
+            window.location="./Email_verify1.html";
         }else{
         swal("Error", json['error'], "error");   
         }

@@ -20,8 +20,8 @@ document.getElementById('login-form').addEventListener('submit',function(e){
     const name2 = document.getElementById('your_email').value;
     //const name1=document.getElementById('your_pass').value;
     const password2 = document.getElementById('your_pass').value;
-    const api_key="f8f015ecc7b44240b23ed4a5fc2db01d";
-	const client_id="71c37b6831a847e2a3ba370125974f1f";
+     const api_key="a93e8f09748d43f3a44571f2893d5c2b";  
+    const client_id="6329761b61bf4e569217c946fc3c0392";
     //const token = localStorage.getItem('user_login_token');
     user_login(api_key,client_id,name2,password2);
                     
@@ -59,6 +59,12 @@ xhr.onreadystatechange = function () {
             window.location="./login_dash.html";
             window.localStorage.setItem('user_login_token',json.token);
             } 
+        }else if(xhr.status==403)
+            {
+    swal("Error", json['error'], "error").then(function(){
+        window.location = "./Email_verify1.html";
+    });
+    //window.location = "./Email_verify1.html";
         }else{
             swal("Error", json['error'], "error");
         }
