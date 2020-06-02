@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, url_for, copy_current_request_context
-from init_db import initDB
+from util.init_db import initDB
 import psycopg2.errors
 import psycopg2
 import uuid

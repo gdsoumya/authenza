@@ -1,4 +1,4 @@
-from util import *
+from util.util import *
 from flask import Blueprint
 
 two_fa_bp = Blueprint('two_fa_bp', __name__)
