@@ -14,7 +14,7 @@ RUN \
  python3 -m pip install -r requirements.txt --no-cache-dir && \
  apk --purge del .build-deps
 
-RUN python gen_key.py
+RUN python ./util/gen_key.py
 
 EXPOSE 8080
 
