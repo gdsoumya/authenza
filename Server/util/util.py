@@ -52,7 +52,7 @@ def init():
     _secret = data[0].split()[1]
     _conn=initDB()
     if _conn is None:
-        print("\nXX SERVER STARTUP FAILED XX")
+        print("\nXX SERVER STARTUP FAILED - RESTART SERVER MANUALLY XX")
         return None
     _cur = _conn.cursor()
     return (_conn,_cur,_secret)
