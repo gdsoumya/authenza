@@ -47,7 +47,7 @@ BASE_URL=http://localhost
 ```
 If you are using Gmail as the email service you may have to turn on [**Less Secure Application Access**](https://support.google.com/accounts/answer/6010255?hl=en).<br>
 At first you may put any random value for the **API_KEY** and **CLIENT_ID**, later on after creating an API_KEY from the org dashboard you can change the values and restart docker-compose.
-### Setting Up Android APK
+### Setting up the Android APK
 Before you can build the android APK you need to change the base url in the source code, find the java files
 ```
 app/src/main/java/com/example/fingerprint_protection/scannerActivity.java
