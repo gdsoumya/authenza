@@ -214,7 +214,7 @@ public class scannerActivity extends AppCompatActivity implements ZXingScannerVi
 
             data = new String[][]{{"token", strings[1]}};
             try {
-                response1 = httpManager.send_postRequest("http://authenza.tk/" + strings[0], data);
+                response1 = httpManager.send_postRequest("http://localhost/" + strings[0], data);
                 Log.d("respnse1", "wordking");
             } catch (IOException e) {
                 activity.runOnUiThread(new Runnable() {
@@ -285,7 +285,7 @@ public class scannerActivity extends AppCompatActivity implements ZXingScannerVi
         @Override
         protected Bitmap doInBackground(String... strings) {
             try {
-                URL url = new URL("http://authenza.tk/static/logo/" + strings[0] + ".png");
+                URL url = new URL("http://localhost/static/logo/" + strings[0] + ".png");
                 Log.d("url", url.toString());
                 URLConnection urlConn = url.openConnection();
                 HttpURLConnection httpURLConnection = (HttpURLConnection) urlConn;
@@ -344,7 +344,7 @@ public class scannerActivity extends AppCompatActivity implements ZXingScannerVi
             Response r;
             String result = null;
             try {
-                r = httpManager.send_postRequest("http://authenza.tk/org/listing", null);
+                r = httpManager.send_postRequest("http://localhost/org/listing", null);
                 result = r.body().string();
 
             } catch (IOException e) {

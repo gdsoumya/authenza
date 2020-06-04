@@ -145,7 +145,7 @@ public class fingerPrint_Auth  {
            functions.set_processDialog(progressDialog,"Loading");
             data = new String[][] {{"token",strings[1]}};
             try {
-                response1 = httpManager.send_postRequest("http://authenza.tk/"+strings[0],data);
+                response1 = httpManager.send_postRequest("http://localhost/"+strings[0],data);
                 Log.d("respnse1","wordking");
             } catch (IOException e) {
                 e.printStackTrace();
