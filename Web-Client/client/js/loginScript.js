@@ -91,12 +91,12 @@ function user_two_factor_check_login(apikey, clientid, token) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status >= 200) {
             var json = JSON.parse(xhr.responseText);
-            console.log(json);
             if (xhr.status == 200 && json['token']) {
-                handler2();
+                //alert(json.token)
+                window.localStorage.setItem('user_login_token', json.token);
+                //setTimeout(5000)
                 window.location = "./login_dash.html";
             } else {
-                console.log(json);
                 setTimeout(user_two_factor_check_login(apikey, clientid, token), 5000);
             }
         }
