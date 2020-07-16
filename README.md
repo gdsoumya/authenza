@@ -72,7 +72,7 @@ The **Org-Client** UI will not function until correct **API_KEY** and **CLIENT_I
 ```
 $ docker-compose up
 ```
-## Authors
+## Contributors
 -   **Soumya Ghosh Dastidar** : Backend
 -   **Niraj Singh** : Android
 -   **Abhinav Ghosh** : Front-End
